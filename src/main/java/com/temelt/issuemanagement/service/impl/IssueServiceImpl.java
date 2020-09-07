@@ -29,31 +29,29 @@ public class IssueServiceImpl implements IssueService {
     @Override
     public IssueDto save(IssueDto issue) {
         // Bussiness Logic
-
         if (issue.getDate() == null) {
             throw new IllegalArgumentException("Issue Date cannot be null");
         }
 
+        //DTO-Entity mapping->Transform IssueDTO to the Issue entity
         Issue issueEntity = modelMapper.map(issue, Issue.class);
-
         issueEntity = issueRepository.save(issueEntity);
-
         issue.setId(issueEntity.getId());
         return issue;
     }
 
     @Override
     public IssueDto getById(Long id) {
-        Issue issue = issueRepository.getOne(id);
+        Issue issue = issueRepository.getOne(id); //Buradan Entity gelecek.Aşağıda DTO'ya cevirip return edecegiz
         return modelMapper.map(issue, IssueDto.class);
     }
 
     @Override
     public TPage<IssueDto> getAllPageable(Pageable pageable) {
         Page<Issue> data = issueRepository.findAll(pageable);
-        TPage<IssueDto> respnose = new TPage<IssueDto>();
-        respnose.setStat(data, Arrays.asList(modelMapper.map(data.getContent(), IssueDto[].class)));
-        return respnose;
+        TPage<IssueDto> response = new TPage<IssueDto>();
+        response.setStat(data, Arrays.asList(modelMapper.map(data.getContent(), IssueDto[].class)));
+        return response;
     }
 
     @Override

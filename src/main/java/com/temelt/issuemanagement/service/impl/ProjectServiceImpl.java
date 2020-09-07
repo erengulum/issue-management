@@ -26,23 +26,25 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public ProjectDto save(ProjectDto project) {
+    public ProjectDto save(ProjectDto projectDto) {
 
-        Project projectCheck = projectRepository.getByProjectCode(project.getProjectCode());
-
+        //Business logic
+        Project projectCheck = projectRepository.getByProjectCode(projectDto.getProjectCode());
         if (projectCheck != null)
             throw new IllegalArgumentException("Project Code Already Exist");
 
-        Project p = modelMapper.map(project, Project.class);
+        //Map & save
+        Project p = modelMapper.map(projectDto, Project.class); //Maps ProjectDTO(projectDto) to Project(p) object
         p = projectRepository.save(p);
-        project.setId(p.getId());
-        return project;
+        projectDto.setId(p.getId());
+        return projectDto;
     }
+
 
     @Override
     public ProjectDto getById(Long id) {
-        Project p = projectRepository.getOne(id);
-        return modelMapper.map(p, ProjectDto.class);
+        Project p = projectRepository.getOne(id); //get the project
+        return modelMapper.map(p, ProjectDto.class); //map project entity to the ProjectDto
     }
 
     @Override
@@ -56,11 +58,11 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public TPage<ProjectDto> getAllPageable(Pageable pageable) {
+    public TPage<ProjectDto> getAllPageable(Pageable pageable) { //Pageable object contains info about pagination(size&offset vs)
         Page<Project> data = projectRepository.findAll(pageable);
-        TPage<ProjectDto> respnose = new TPage<ProjectDto>();
-        respnose.setStat(data, Arrays.asList(modelMapper.map(data.getContent(), ProjectDto[].class)));
-        return respnose;
+        TPage<ProjectDto> response = new TPage<ProjectDto>();
+        response.setStat(data, Arrays.asList(modelMapper.map(data.getContent(), ProjectDto[].class)));
+        return response;
     }
 
     @Override
@@ -75,6 +77,8 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public ProjectDto update(Long id, ProjectDto project) {
+
+        //Business Logic
         Project projectDb = projectRepository.getOne(id);
         if (projectDb == null)
             throw new IllegalArgumentException("Project Does Not Exist ID:" + id);
@@ -83,10 +87,11 @@ public class ProjectServiceImpl implements ProjectService {
         if (projectCheck != null)
             throw new IllegalArgumentException("Project Code Already Exist");
 
+        //update
         projectDb.setProjectCode(project.getProjectCode());
         projectDb.setProjectName(project.getProjectName());
-
         projectRepository.save(projectDb);
+
         return modelMapper.map(projectDb, ProjectDto.class);
     }
 
