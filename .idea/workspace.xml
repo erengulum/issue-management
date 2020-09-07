@@ -3,9 +3,38 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1a42aacc-63f8-443e-b331-36f8e6035300" name="Default Changelist" comment="Commit-2">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/issue-management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/issue-management.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/BaseEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/Issue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/Issue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/IssueHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/IssueHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/IssueStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/IssueStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/IssueHistoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/IssueHistoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/IssueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/IssueRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/temelt/issuemanagement/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +58,13 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -37,17 +72,6 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="IssueManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="issue-management" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.temelt.issuemanagement.IssueManagementApplication" />
@@ -64,17 +88,74 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599478633113</updated>
-      <workItem from="1599478634833" duration="84000" />
+      <workItem from="1599478634833" duration="2511000" />
+      <workItem from="1599511184929" duration="2315000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit-2">
+      <created>1599478773790</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599478773790</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Commit-2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit-2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="249" y="0" key="#Project_Structure" timestamp="1599478719081">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1599478719081" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1599482765822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599482765822" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1599482765821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599482765821" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1599482765821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599482765821" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1599482765821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599482765821" />
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom" timestamp="1599482765823">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599482765823" />
+    <state width="1493" height="210" key="GridCell.Tab.1.center" timestamp="1599482765822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1599482765822" />
+    <state width="1493" height="210" key="GridCell.Tab.1.left" timestamp="1599482765822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1599482765822" />
+    <state width="1493" height="210" key="GridCell.Tab.1.right" timestamp="1599482765822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1599482765822" />
   </component>
 </project>

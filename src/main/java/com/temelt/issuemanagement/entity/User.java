@@ -5,9 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by temelt on 3.02.2019.
- */
+
 @Entity
 @Table(name = "users")
 @Data
@@ -33,7 +31,8 @@ public class User extends BaseEntity {
     @Column(name = "email", length = 100)
     private String email;
 
+    //Bi-directional mapping
     @JoinColumn(name = "assignee_user_id")
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(fetch = FetchType.LAZY) //Lazy fetch means it will be bring only if there is a call for this column.
     private List<Issue> issues;
 }

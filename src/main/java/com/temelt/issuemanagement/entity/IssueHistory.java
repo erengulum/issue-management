@@ -5,9 +5,7 @@ import lombok.*;
 import javax.persistence.*;
 import java.util.Date;
 
-/**
- * Created by temelt on 3.02.2019.
- */
+
 @Entity
 @Table(name = "issue_history")
 @Data
@@ -21,6 +19,7 @@ public class IssueHistory extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    //One way mapping
     @JoinColumn(name = "issue_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
     private Issue issue;
@@ -39,6 +38,7 @@ public class IssueHistory extends BaseEntity {
     @Column(name = "details",length = 4000)
     private String details;
 
+    //One way mapping
     @JoinColumn(name = "assignee_user_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)
     private User assignee;

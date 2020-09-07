@@ -4,9 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 
-/**
- * Created by temelt on 3.02.2019.
- */
+
 @Entity
 @Table(name = "project")
 @Data
@@ -25,6 +23,7 @@ public class Project extends BaseEntity {
 
     @Column(name = "project_code",length = 30)
     private String projectCode;
+
 
     @JoinColumn(name = "manager_user_id")
     @ManyToOne(optional = true, fetch = FetchType.LAZY)

@@ -11,15 +11,13 @@ import javax.persistence.TemporalType;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by temelt on 3.02.2019.
- */
+//Base entity will be used for base properties that will be used by other Entity classes
 @Data
 @MappedSuperclass
 public abstract class BaseEntity implements Serializable {
 
     @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "created_at")
+    @Column(name = "created_at") //We have to specify Column name even if it is a baseEntity class.These columns will be added to all entities that extends this class
     private Date createdAt;
 
     @Column(name = "created_by",length = 50)
