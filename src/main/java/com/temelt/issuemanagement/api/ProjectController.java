@@ -13,24 +13,22 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
-/**
- * Created by temelt on 4.02.2019.
- */
+
 @RestController
 @RequestMapping(ApiPaths.ProjectCtrl.CTRL)
 @Api(value = ApiPaths.ProjectCtrl.CTRL, description = "Project APIs")
 @Slf4j
 public class ProjectController {
-
+    //We can also define ProjectService interface and then we can assign the Impl object inside the constructor:
     private final ProjectServiceImpl projectServiceImpl;
-
+    //There is no need for @Autowired annotation since Spring supports Constructor injection without annotation
     public ProjectController(ProjectServiceImpl projectServiceImpl) {
         this.projectServiceImpl = projectServiceImpl;
     }
 
     @GetMapping("/pagination")
     @ApiOperation(value = "Get By Pagination Operation", response = ProjectDto.class)
-    public ResponseEntity<TPage<ProjectDto>> getAllByPagination(Pageable pageable) {
+    public ResponseEntity<TPage<ProjectDto>> getAllByPagination(Pageable pageable) { //Pageagle objects contain information about pages
         TPage<ProjectDto> data = projectServiceImpl.getAllPageable(pageable);
         return ResponseEntity.ok(data);
     }

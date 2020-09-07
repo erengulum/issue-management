@@ -13,9 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.time.LocalDate;
 
-/**
- * Created by temelt on 5.02.2019.
- */
+
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

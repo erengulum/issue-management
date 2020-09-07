@@ -12,12 +12,12 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 
-/**
- * Created by temelt on 4.02.2019.
- */
+
 @Service
 public class IssueServiceImpl implements IssueService {
 
+    //Repository will be injected for DB operations
+    //ModelMapper will be injected for DTO-Entity transformations/mapping
     private final IssueRepository issueRepository;
     private final ModelMapper modelMapper;
 

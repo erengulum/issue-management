@@ -4,11 +4,10 @@ import com.temelt.issuemanagement.dto.IssueDto;
 import com.temelt.issuemanagement.util.TPage;
 import org.springframework.data.domain.Pageable;
 
-/**
- * Created by temelt on 4.02.2019.
- */
+
 public interface IssueService {
 
+    //Bunlar zaten Repository'nin hazır olarak sundugu methodlar. DTO-Entity dönüsümü ise implementasyonlar icinde yapılacak
     IssueDto save(IssueDto issue);
 
     IssueDto getById(Long id);

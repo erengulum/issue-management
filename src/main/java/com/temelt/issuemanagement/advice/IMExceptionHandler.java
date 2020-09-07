@@ -11,15 +11,13 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 
 import java.util.Date;
 
-/**
- * Created by temelt on 6.02.2019.
- */
+
 @ControllerAdvice
 @RestController
-@Slf4j
+@Slf4j //Modern logger API
 public class IMExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(Exception.class)
+    @ExceptionHandler(Exception.class) //This method will wake up as soon as code enters the any exception class
     public final ResponseEntity<?> handleExceptions(Exception ex, WebRequest request) {
         log.error("ControllerAdvice -> ExceptionHandler -> " , ex ,request);
         ExceptionResponse  exceptionResponse =new ExceptionResponse(new Date(),ex.getMessage());

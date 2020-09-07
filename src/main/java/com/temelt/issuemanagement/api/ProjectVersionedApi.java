@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Created by temelt on 6.02.2019.
- */
+
 @RestController
 @RequestMapping("/versioning")
 @Api(value = ApiPaths.ProjectCtrl.CTRL, description = "Project APIs")
